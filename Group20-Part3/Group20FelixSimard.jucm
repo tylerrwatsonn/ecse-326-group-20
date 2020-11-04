@@ -1468,7 +1468,7 @@
       <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef1899" id="1899" x="304" y="156" width="208" height="397" contDef="1898" nodes="2962">
         <label/>
       </contRefs>
-      <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef2198" id="2198" x="545" y="155" width="364" height="396" contDef="2197" nodes="2982 2996 3067 3084">
+      <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef2198" id="2198" x="545" y="155" width="364" height="396" contDef="2197" nodes="2982 3067 3084">
         <label/>
       </contRefs>
       <connections xsi:type="ucm.map:NodeConnection" source="1875" target="2962"/>
