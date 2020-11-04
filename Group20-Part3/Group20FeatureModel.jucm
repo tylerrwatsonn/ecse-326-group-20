@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="anthonyporporino" created="October 29, 2020 at 8:49:48 AM EDT" modified="November 4, 2020 at 10:52:54 AM EST" specVersion="68" urnVersion="1.27" nextGlobalID="488">
+<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="anthonyporporino" created="October 29, 2020 at 8:49:48 AM EDT" modified="November 4, 2020 at 11:02:59 AM EST" specVersion="70" urnVersion="1.27" nextGlobalID="527">
   <ucmspec>
     <scenarioGroups name="ScenarioGroup5" id="5">
       <scenarios name="ScenarioDef6" id="6"/>
@@ -30,7 +30,7 @@
       <metadata name="_addAggregate" value="disable"/>
       <metadata name="_autoSelected" value="20201104-104326286"/>
     </intElements>
-    <intElements xsi:type="fm:Feature" name="Management of subgroups" id="90" linksDest="150 197 251 393" linksSrc="125" type="Task" refs="91">
+    <intElements xsi:type="fm:Feature" name="Management of groups" id="90" linksDest="150 197 251 393" linksSrc="125" type="Task" refs="91">
       <metadata name="_addAggregate" value="disable"/>
       <metadata name="_autoSelected" value="20201104-104326286"/>
     </intElements>
@@ -41,7 +41,7 @@
       <metadata name="_addAggregate" value="disable"/>
       <metadata name="_autoSelected" value="20201104-104326286"/>
     </intElements>
-    <intElements xsi:type="fm:Feature" name="Managment" id="96" linksDest="107 453 396" linksSrc="101" type="Task" refs="97">
+    <intElements xsi:type="fm:Feature" name="Meeting management" id="96" linksDest="107 453 396" linksSrc="101" type="Task" refs="97">
       <metadata name="_addAggregate" value="disable"/>
       <metadata name="_autoSelected" value="20201104-104326286"/>
     </intElements>
@@ -54,7 +54,7 @@
       <metadata name="_autoSelected" value="20201104-104326286"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Generate Randomly" id="119" linksSrc="143" type="Task" refs="120"/>
-    <intElements xsi:type="fm:Feature" name="Interaction" id="128" linksDest="341 345 346" linksSrc="132" type="Task" decompositionType="Or" refs="129">
+    <intElements xsi:type="fm:Feature" name="Group interaction" id="128" linksDest="341 345 346" linksSrc="132" type="Task" decompositionType="Or" refs="129">
       <metadata name="_addAggregate" value="disable"/>
       <metadata name="_autoSelected" value="20201104-104326286"/>
     </intElements>
