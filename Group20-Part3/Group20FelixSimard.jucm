@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="anthonyporporino" created="October 29, 2020 at 8:49:48 AM EDT" modified="November 4, 2020 at 12:45:41 PM EST" specVersion="97" urnVersion="1.27" nextGlobalID="1860">
+<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="anthonyporporino" created="October 29, 2020 at 8:49:48 AM EDT" modified="November 4, 2020 at 1:16:53 PM EST" specVersion="98" urnVersion="1.27" nextGlobalID="1870">
   <ucmspec>
     <scenarioGroups name="ScenarioGroup5" id="5">
       <scenarios name="ScenarioDef6" id="6"/>
@@ -19,7 +19,7 @@
       <metadata name="_addAggregate" value="disable"/>
       <metadata name="_numEval" value="100"/>
       <metadata name="_qualEval" value="Satisfied"/>
-      <metadata name="_autoSelected" value="20201104-124539804"/>
+      <metadata name="_autoSelected" value="20201104-131649790"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Online Video Software" id="80" linksDest="102 103 338 362 421" type="Task" refs="81">
       <metadata name="_numEval" value="100"/>
@@ -29,13 +29,13 @@
       <metadata name="_addAggregate" value="disable"/>
       <metadata name="_numEval" value="100"/>
       <metadata name="_qualEval" value="Satisfied"/>
-      <metadata name="_autoSelected" value="20201104-124539804"/>
+      <metadata name="_autoSelected" value="20201104-131649790"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Video" id="84" linksDest="105 111 378" linksSrc="102" type="Task" refs="85">
       <metadata name="_addAggregate" value="disable"/>
       <metadata name="_numEval" value="100"/>
       <metadata name="_qualEval" value="Satisfied"/>
-      <metadata name="_autoSelected" value="20201104-124539804"/>
+      <metadata name="_autoSelected" value="20201104-131649790"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Hide Camera" id="86" linksSrc="111" type="Task" refs="87">
       <metadata name="_addAggregate" value="disable"/>
@@ -46,23 +46,24 @@
       <metadata name="_addAggregate" value="disable"/>
       <metadata name="_numEval" value="100"/>
       <metadata name="_qualEval" value="Satisfied"/>
-      <metadata name="_autoSelected" value="20201104-124539804"/>
+      <metadata name="_autoSelected" value="20201104-131649790"/>
     </intElements>
-    <intElements xsi:type="fm:Feature" name="Management of groups" id="90" linksDest="150 197 251 393" linksSrc="1661 1821 1859" type="Task" importance="High" importanceQuantitative="100" refs="91 1232">
+    <intElements xsi:type="fm:Feature" name="Management of groups" id="90" linksDest="150 197 251 393" linksSrc="1661 1821 1859 1869" type="Task" importance="High" importanceQuantitative="100" refs="91 1232">
       <metadata name="_addAggregate" value="disable"/>
       <metadata name="_numEval" value="100"/>
       <metadata name="_qualEval" value="Satisfied"/>
+      <metadata name="_autoSelected" value="20201104-131649790"/>
     </intElements>
-    <intElements xsi:type="fm:Feature" name="Group Collaboration" id="92" linksSrc="338 1711 1763 1819" type="Task" importance="High" importanceQuantitative="100" refs="75 945">
+    <intElements xsi:type="fm:Feature" name="Group Collaboration" id="92" linksDest="1869" linksSrc="338 1711 1763 1819" type="Task" importance="High" importanceQuantitative="100" refs="75 945">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
+      <metadata name="_numEval" value="100"/>
+      <metadata name="_qualEval" value="Satisfied"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Audio" id="94" linksDest="112 429" linksSrc="103" type="Task" refs="95">
       <metadata name="_addAggregate" value="disable"/>
       <metadata name="_numEval" value="100"/>
       <metadata name="_qualEval" value="Satisfied"/>
-      <metadata name="_autoSelected" value="20201104-124539804"/>
+      <metadata name="_autoSelected" value="20201104-131649790"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Meeting management" id="96" linksDest="107 453 396" linksSrc="1678 1681 1694 1820" type="Task" importance="High" importanceQuantitative="100" refs="97 870">
       <metadata name="_addAggregate" value="disable"/>
@@ -73,27 +74,27 @@
       <metadata name="_addAggregate" value="disable"/>
       <metadata name="_numEval" value="100"/>
       <metadata name="_qualEval" value="Satisfied"/>
-      <metadata name="_autoSelected" value="20201104-124539804"/>
-      <metadata name="_userSetEvaluationWarning" value="100 != 0"/>
+      <metadata name="_autoSelected" value="20201104-131649790"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Join a specific group" id="117" linksSrc="357" type="Task" refs="118">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
+      <metadata name="_numEval" value="100"/>
+      <metadata name="_qualEval" value="Satisfied"/>
+      <metadata name="_autoSelected" value="20201104-131649790"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Generate Randomly" id="119" linksSrc="143" type="Task" refs="120">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
+      <metadata name="_numEval" value="100"/>
+      <metadata name="_qualEval" value="Satisfied"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Group interaction" id="128" linksDest="341 345 346" linksSrc="132" type="Task" decompositionType="Or" refs="129">
       <metadata name="_addAggregate" value="disable"/>
       <metadata name="_numEval" value="100"/>
       <metadata name="_qualEval" value="Satisfied"/>
-      <metadata name="_autoSelected" value="20201104-124539804"/>
+      <metadata name="_autoSelected" value="20201104-131649790"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Manually Assign Students" id="139" linksSrc="297" type="Task" refs="140">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
+      <metadata name="_numEval" value="100"/>
+      <metadata name="_qualEval" value="Satisfied"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Communication With Groups" id="155" type="Task" decompositionType="Or">
       <metadata name="_numEval" value="0"/>
@@ -119,26 +120,25 @@
       <metadata name="_qualEval" value="Satisfied"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Direct Messages" id="182" linksSrc="231" type="Task" refs="183">
-      <metadata name="_numEval" value="100"/>
-      <metadata name="_qualEval" value="Satisfied"/>
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Manipulate Groups" id="184" linksDest="270 273 446" linksSrc="251" type="Task" decompositionType="Or" refs="185">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
+      <metadata name="_numEval" value="100"/>
+      <metadata name="_qualEval" value="Satisfied"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="End Group Session" id="191" linksDest="398 399" linksSrc="197" type="Task" decompositionType="Or" refs="192">
       <metadata name="_addAggregate" value="disable"/>
       <metadata name="_numEval" value="100"/>
       <metadata name="_qualEval" value="Satisfied"/>
-      <metadata name="_autoSelected" value="20201104-124539804"/>
+      <metadata name="_autoSelected" value="20201104-131649790"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Intragroup" id="203" linksDest="351 354 404" linksSrc="341" type="Task" refs="204">
       <metadata name="_addAggregate" value="disable"/>
       <metadata name="_numEval" value="100"/>
       <metadata name="_qualEval" value="Satisfied"/>
-      <metadata name="_autoSelected" value="20201104-124539804"/>
-      <metadata name="_userSetEvaluationWarning" value="100 != 0"/>
+      <metadata name="_autoSelected" value="20201104-131649790"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Record Meeting" id="205" linksSrc="396" type="Task" refs="369">
       <metadata name="_addAggregate" value="disable"/>
@@ -153,13 +153,13 @@
       <metadata name="_addAggregate" value="disable"/>
       <metadata name="_numEval" value="100"/>
       <metadata name="_qualEval" value="Satisfied"/>
-      <metadata name="_autoSelected" value="20201104-124539804"/>
+      <metadata name="_autoSelected" value="20201104-131649790"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Audience" id="215" linksDest="231 229" linksSrc="226" type="Task" decompositionType="Or" refs="216">
       <metadata name="_addAggregate" value="disable"/>
       <metadata name="_numEval" value="100"/>
       <metadata name="_qualEval" value="Satisfied"/>
-      <metadata name="_autoSelected" value="20201104-124539804"/>
+      <metadata name="_autoSelected" value="20201104-131649790"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Picture files" id="235" linksSrc="250" type="Task" refs="236">
       <metadata name="_numEval" value="0"/>
@@ -173,31 +173,31 @@
       <metadata name="_addAggregate" value="disable"/>
       <metadata name="_numEval" value="100"/>
       <metadata name="_qualEval" value="Satisfied"/>
-      <metadata name="_autoSelected" value="20201104-124539804"/>
+      <metadata name="_autoSelected" value="20201104-131649790"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Rename Groups" id="254" linksSrc="273" type="Task" refs="255">
       <metadata name="_numEval" value="0"/>
       <metadata name="_qualEval" value="None"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Change group members" id="262" linksSrc="270" type="Task" refs="263">
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
+      <metadata name="_numEval" value="100"/>
+      <metadata name="_qualEval" value="Satisfied"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="End Manually" id="288" linksSrc="398" type="Task" refs="289">
       <metadata name="_addAggregate" value="disable"/>
       <metadata name="_numEval" value="100"/>
       <metadata name="_qualEval" value="Satisfied"/>
-      <metadata name="_autoSelected" value="20201104-124539804"/>
+      <metadata name="_autoSelected" value="20201104-131649790"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Whiteboard" id="300" linksSrc="354" type="Task" refs="301">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
+      <metadata name="_numEval" value="100"/>
+      <metadata name="_qualEval" value="Satisfied"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Group Chat" id="304" linksSrc="351" type="Task" refs="305" selectable="true">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
+      <metadata name="_numEval" value="100"/>
+      <metadata name="_qualEval" value="Satisfied"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Signal Host" id="306" linksSrc="348" type="Task" refs="307">
       <metadata name="_addAggregate" value="disable"/>
@@ -215,8 +215,8 @@
     </intElements>
     <intElements xsi:type="fm:Feature" name="Host to group" id="322" linksDest="357 359 360" linksSrc="345" type="Task" refs="323">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
+      <metadata name="_numEval" value="100"/>
+      <metadata name="_qualEval" value="Satisfied"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Edit Permissions" id="364" linksSrc="453" type="Task" refs="365">
       <metadata name="_addAggregate" value="disable"/>
@@ -233,8 +233,8 @@
     </intElements>
     <intElements xsi:type="fm:Feature" name="Choose Number of Groups" id="387" linksSrc="393" type="Task" refs="388">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
+      <metadata name="_numEval" value="100"/>
+      <metadata name="_qualEval" value="Satisfied"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Reaction" id="402" linksSrc="404" type="Task" refs="403">
       <metadata name="_addAggregate" value="disable"/>
@@ -245,7 +245,7 @@
       <metadata name="_addAggregate" value="disable"/>
       <metadata name="_numEval" value="100"/>
       <metadata name="_qualEval" value="Satisfied"/>
-      <metadata name="_autoSelected" value="20201104-124539804"/>
+      <metadata name="_autoSelected" value="20201104-131649790"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Web Browser" id="408" linksSrc="423" type="Task" refs="409">
       <metadata name="_numEval" value="100"/>
@@ -263,7 +263,7 @@
       <metadata name="_addAggregate" value="disable"/>
       <metadata name="_numEval" value="100"/>
       <metadata name="_qualEval" value="Satisfied"/>
-      <metadata name="_autoSelected" value="20201104-124539804"/>
+      <metadata name="_autoSelected" value="20201104-131649790"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Change Privacy Settings" id="439" linksSrc="446" type="Task" refs="440">
       <metadata name="_numEval" value="0"/>
@@ -280,7 +280,7 @@
     </intElements>
     <intElements name="Increase control over managing the online learning experience" id="576" linksDest="1706 1738 1763 1859" linksSrc="1708" type="Goal" refs="577">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="56"/>
+      <metadata name="_numEval" value="49"/>
       <metadata name="_qualEval" value="WeaklySatisfied"/>
     </intElements>
     <intElements name="Minimize setup and configuration time" id="578" linksDest="1692 1694" linksSrc="1713" type="Goal" refs="579">
@@ -290,31 +290,31 @@
     </intElements>
     <intElements name="Increase academic success of institution" id="580" linksDest="1736 1759" linksSrc="1760" type="Goal" refs="581">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="21"/>
+      <metadata name="_numEval" value="25"/>
       <metadata name="_qualEval" value="WeaklySatisfied"/>
     </intElements>
     <intElements name="Improve learning experience for students" id="582" linksDest="1703" linksSrc="1657 1736" type="Goal" refs="583">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="12"/>
+      <metadata name="_numEval" value="18"/>
       <metadata name="_qualEval" value="WeaklySatisfied"/>
     </intElements>
     <intElements name="Improve teaching environment for teaching staff" id="586" linksDest="1661 1678 1793" linksSrc="1658" type="Goal" refs="587">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="87"/>
+      <metadata name="_numEval" value="93"/>
       <metadata name="_qualEval" value="WeaklySatisfied"/>
     </intElements>
     <intElements name="Increase satisfaction of students and teaching staff" id="871" linksDest="1657 1658 1708" linksSrc="1761" type="Goal" refs="872">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="63"/>
+      <metadata name="_numEval" value="67"/>
       <metadata name="_qualEval" value="WeaklySatisfied"/>
     </intElements>
     <intElements name="Increase communication between students and teaching staff" id="1233" linksDest="1711" linksSrc="1706" type="Goal" refs="1234">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="0"/>
-      <metadata name="_qualEval" value="None"/>
+      <metadata name="_numEval" value="75"/>
+      <metadata name="_qualEval" value="WeaklySatisfied"/>
     </intElements>
     <intElements name="Drive reputation of teaching institution" id="1243" linksDest="1760 1761" type="Goal" refs="1244">
-      <metadata name="_numEval" value="62"/>
+      <metadata name="_numEval" value="68"/>
       <metadata name="_qualEval" value="WeaklySatisfied"/>
     </intElements>
     <intElements name="Assure privacy of information for students and teaching staff" id="1637" linksDest="1681" linksSrc="1738" type="Goal" refs="1638">
@@ -324,7 +324,7 @@
     </intElements>
     <intElements name="Increase efficiency of classroom" id="1684" linksDest="1819 1820 1821" linksSrc="1703 1793" type="Goal" decompositionType="Or" refs="1685">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="50"/>
+      <metadata name="_numEval" value="75"/>
       <metadata name="_qualEval" value="WeaklySatisfied"/>
     </intElements>
     <intElements name="Increase simplicity of online learning tool" id="1740" linksDest="1750" linksSrc="1759" type="Goal" refs="1741">
@@ -333,8 +333,8 @@
       <metadata name="_qualEval" value="WeaklySatisfied"/>
     </intElements>
     <actors name="Teaching Institutions" id="588" contRefs="589">
-      <metadata name="_numEval" value="71"/>
-      <metadata name="_qualEval" value="WeaklySatisfied"/>
+      <metadata name="_numEval" value="100"/>
+      <metadata name="_qualEval" value="Satisfied"/>
     </actors>
     <links xsi:type="fm:MandatoryFMLink" name="Mandatory102" id="102" refs="//@urndef/@specDiagrams.0/@connections.0" dest="80" src="84"/>
     <links xsi:type="fm:MandatoryFMLink" name="Mandatory103" id="103" refs="//@urndef/@specDiagrams.0/@connections.1" dest="80" src="94"/>
@@ -406,6 +406,7 @@
     <links xsi:type="grl:Contribution" name="Contribution1820" id="1820" refs="//@urndef/@specDiagrams.1/@connections.22" dest="1684" src="96"/>
     <links xsi:type="grl:Contribution" name="Contribution1821" id="1821" refs="//@urndef/@specDiagrams.1/@connections.23" dest="1684" src="90"/>
     <links xsi:type="grl:Contribution" name="Contribution1859" id="1859" refs="//@urndef/@specDiagrams.1/@connections.24" dest="576" src="90" contribution="SomePositive" quantitativeContribution="50"/>
+    <links xsi:type="fm:MandatoryFMLink" name="Mandatory1869" id="1869" refs="//@urndef/@specDiagrams.0/@connections.45" dest="92" src="90" quantitativeContribution="100"/>
     <groups name="StrategiesGroup3" id="3" strategies="4 386 436 438 452"/>
     <strategies name="Zoom" id="4" author="anthonyporporino" group="3">
       <evaluations evaluation="100" qualitativeEvaluation="Satisfied" intElement="94">
@@ -967,7 +968,7 @@
         <metadata name="_height" value="45"/>
         <metadata name="_width" value="110"/>
       </nodes>
-      <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef75" id="75" x="1248" y="58" succ="//@urndef/@specDiagrams.0/@connections.20" pred="//@urndef/@specDiagrams.0/@connections.6" def="92">
+      <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef75" id="75" x="1248" y="58" succ="//@urndef/@specDiagrams.0/@connections.20" pred="//@urndef/@specDiagrams.0/@connections.6 //@urndef/@specDiagrams.0/@connections.45" def="92">
         <metadata name="_height" value="45"/>
         <metadata name="_width" value="110"/>
       </nodes>
@@ -995,7 +996,7 @@
         <metadata name="_height" value="45"/>
         <metadata name="_width" value="110"/>
       </nodes>
-      <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef91" id="91" x="1047" y="179" pred="//@urndef/@specDiagrams.0/@connections.8 //@urndef/@specDiagrams.0/@connections.9 //@urndef/@specDiagrams.0/@connections.16 //@urndef/@specDiagrams.0/@connections.32" def="90">
+      <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef91" id="91" x="1047" y="179" succ="//@urndef/@specDiagrams.0/@connections.45" pred="//@urndef/@specDiagrams.0/@connections.8 //@urndef/@specDiagrams.0/@connections.9 //@urndef/@specDiagrams.0/@connections.16 //@urndef/@specDiagrams.0/@connections.32" def="90">
         <metadata name="_height" value="45"/>
         <metadata name="_width" value="110"/>
       </nodes>
@@ -1262,6 +1263,9 @@
       <connections xsi:type="grl:LinkRef" source="440" target="185" link="446"/>
       <connections xsi:type="grl:LinkRef" source="449" target="116" link="450"/>
       <connections xsi:type="grl:LinkRef" source="365" target="97" link="453">
+        <label deltaX="30" deltaY="-30"/>
+      </connections>
+      <connections xsi:type="grl:LinkRef" source="91" target="75" link="1869">
         <label deltaX="30" deltaY="-30"/>
       </connections>
     </specDiagrams>
