@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="anthonyporporino" created="October 29, 2020 at 8:49:48 AM EDT" modified="November 6, 2020 at 11:09:34 AM EST" specVersion="162" urnVersion="1.27" nextGlobalID="4941">
+<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="anthonyporporino" created="October 29, 2020 at 8:49:48 AM EDT" modified="November 6, 2020 at 11:16:18 AM EST" specVersion="164" urnVersion="1.27" nextGlobalID="4946">
   <ucmspec>
     <scenarioGroups name="ScenarioGroup5" id="5">
-      <scenarios name="browser, no password, host appoves" id="6">
+      <scenarios name="browser, password, wait list, host appoves" id="6">
         <initializations value="3" variable="4800"/>
         <initializations value="true" variable="4881"/>
-        <initializations value="false" variable="4813"/>
+        <initializations value="true" variable="4813"/>
         <initializations value="true" variable="4835"/>
         <initializations value="true" variable="4939"/>
         <startPoints enabled="true" startPoint="1875"/>
@@ -22,7 +22,26 @@
         <endPoints enabled="true" mandatory="true" endPoint="4313"/>
         <endPoints enabled="true" mandatory="true" endPoint="4383"/>
       </scenarios>
-      <scenarios name="browser, password ok, host approves" id="4934"/>
+      <scenarios name="browser, no password, no wait list" id="4934">
+        <initializations value="3" variable="4800"/>
+        <initializations value="false" variable="4881"/>
+        <initializations value="false" variable="4939"/>
+        <initializations value="false" variable="4813"/>
+        <initializations value="true" variable="4835"/>
+        <startPoints enabled="true" startPoint="1875"/>
+        <startPoints enabled="true" startPoint="2547"/>
+        <startPoints enabled="true" startPoint="2381"/>
+        <startPoints enabled="true" startPoint="3502"/>
+        <startPoints enabled="true" startPoint="4299"/>
+        <endPoints enabled="true" mandatory="true" endPoint="2059"/>
+        <endPoints enabled="true" mandatory="true" endPoint="3068"/>
+        <endPoints enabled="true" mandatory="true" endPoint="2549"/>
+        <endPoints enabled="true" mandatory="true" endPoint="3191"/>
+        <endPoints enabled="true" mandatory="true" endPoint="3207"/>
+        <endPoints enabled="true" mandatory="true" endPoint="3504"/>
+        <endPoints enabled="true" mandatory="true" endPoint="4313"/>
+        <endPoints enabled="true" mandatory="true" endPoint="4383"/>
+      </scenarios>
     </scenarioGroups>
     <variables name="Variable" id="4799"/>
     <variables name="Device" id="4800" type="integer"/>
@@ -1463,12 +1482,12 @@
       <comments description="Felix Simard&#xA;From our list of selected existing products, the tools which satisfy the&#xA;best the needs of &quot;Teaching Institutions&quot; are: BlueJeans, Discord,&#xA;Google Meet and Zoom. Essentially, the tools which emphasized group&#xA;collaboration the most were the ones that aligned the best with&#xA;the values and goals of &quot;Teaching Institutions&quot;. Thereby, Twitch was not optimal&#xA;at achieving this goal and is therefore not best suited for answering&#xA;the needs of this particular stakeholder." x="148" y="36" width="347" height="122" fillColor="255,255,200"/>
     </specDiagrams>
     <specDiagrams xsi:type="ucm.map:UCMmap" name="UCM_ConnectToMeeting (Main)" id="1871">
-      <nodes xsi:type="ucm.map:StartPoint" name="Ready to connect" id="1875" x="205" y="352" succ="//@urndef/@specDiagrams.2/@connections.0" scenarioStartPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@startPoints.0">
+      <nodes xsi:type="ucm.map:StartPoint" name="Ready to connect" id="1875" x="205" y="352" succ="//@urndef/@specDiagrams.2/@connections.0" scenarioStartPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@startPoints.0 //@ucmspec/@scenarioGroups.0/@scenarios.1/@startPoints.0">
         <metadata name="_hits" value="1"/>
         <label/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
-      <nodes xsi:type="ucm.map:EndPoint" name="Connected to meeting" id="2059" x="1000" y="346" pred="//@urndef/@specDiagrams.2/@connections.2" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@endPoints.0">
+      <nodes xsi:type="ucm.map:EndPoint" name="Connected to meeting" id="2059" x="1000" y="346" pred="//@urndef/@specDiagrams.2/@connections.2" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@endPoints.0 //@ucmspec/@scenarioGroups.0/@scenarios.1/@endPoints.0">
         <metadata name="_hits" value="0"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
@@ -1481,7 +1500,7 @@
         <metadata name="_hits" value="0"/>
         <label/>
       </nodes>
-      <nodes xsi:type="ucm.map:EndPoint" name="Not connected to meeting" id="3068" x="1009" y="459" pred="//@urndef/@specDiagrams.2/@connections.7" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@endPoints.1">
+      <nodes xsi:type="ucm.map:EndPoint" name="Not connected to meeting" id="3068" x="1009" y="459" pred="//@urndef/@specDiagrams.2/@connections.7" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@endPoints.1 //@ucmspec/@scenarioGroups.0/@scenarios.1/@endPoints.1">
         <metadata name="_hits" value="0"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
@@ -1517,12 +1536,12 @@
       <connections xsi:type="ucm.map:NodeConnection" source="4727" target="2962"/>
     </specDiagrams>
     <specDiagrams xsi:type="ucm.map:UCMmap" name="UCM_ConnectToMeeting (Invitation)" id="2305">
-      <nodes xsi:type="ucm.map:StartPoint" name="Ready to accept meeting invitation" id="2547" x="166" y="306" contRef="2838" succ="//@urndef/@specDiagrams.3/@connections.0" scenarioStartPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@startPoints.1">
+      <nodes xsi:type="ucm.map:StartPoint" name="Ready to accept meeting invitation" id="2547" x="166" y="306" contRef="2838" succ="//@urndef/@specDiagrams.3/@connections.0" scenarioStartPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@startPoints.1 //@ucmspec/@scenarioGroups.0/@scenarios.1/@startPoints.1">
         <metadata name="_hits" value="1"/>
         <label/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
-      <nodes xsi:type="ucm.map:EndPoint" name="Accepted meeting invitation" id="2549" x="1039" y="305" contRef="2838" pred="//@urndef/@specDiagrams.3/@connections.1" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@endPoints.2">
+      <nodes xsi:type="ucm.map:EndPoint" name="Accepted meeting invitation" id="2549" x="1039" y="305" contRef="2838" pred="//@urndef/@specDiagrams.3/@connections.1" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@endPoints.2 //@ucmspec/@scenarioGroups.0/@scenarios.1/@endPoints.2">
         <metadata name="_hits" value="1"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
@@ -1573,17 +1592,17 @@
       <connections xsi:type="ucm.map:NodeConnection" source="3966" target="3933"/>
     </specDiagrams>
     <specDiagrams xsi:type="ucm.map:UCMmap" name="UCM_ConnectToMeeting (Join)" id="2350">
-      <nodes xsi:type="ucm.map:StartPoint" name="Ready to join" id="2381" x="235" y="310" succ="//@urndef/@specDiagrams.4/@connections.0" scenarioStartPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@startPoints.2">
+      <nodes xsi:type="ucm.map:StartPoint" name="Ready to join" id="2381" x="235" y="310" succ="//@urndef/@specDiagrams.4/@connections.0" scenarioStartPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@startPoints.2 //@ucmspec/@scenarioGroups.0/@scenarios.1/@startPoints.2">
         <metadata name="_hits" value="1"/>
         <label/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
-      <nodes xsi:type="ucm.map:EndPoint" name="Connected to meeting" id="3191" x="980" y="273" contRef="2719" pred="//@urndef/@specDiagrams.4/@connections.9" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@endPoints.3">
+      <nodes xsi:type="ucm.map:EndPoint" name="Connected to meeting" id="3191" x="980" y="273" contRef="2719" pred="//@urndef/@specDiagrams.4/@connections.9" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@endPoints.3 //@ucmspec/@scenarioGroups.0/@scenarios.1/@endPoints.3">
         <metadata name="_hits" value="1"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
-      <nodes xsi:type="ucm.map:EndPoint" name="Not connected to meeting" id="3207" x="987" y="385" contRef="2719" pred="//@urndef/@specDiagrams.4/@connections.10" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@endPoints.4">
+      <nodes xsi:type="ucm.map:EndPoint" name="Not connected to meeting" id="3207" x="987" y="385" contRef="2719" pred="//@urndef/@specDiagrams.4/@connections.10" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@endPoints.4 //@ucmspec/@scenarioGroups.0/@scenarios.1/@endPoints.4">
         <metadata name="_hits" value="0"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
@@ -1598,12 +1617,12 @@
         <metadata name="_hits" value="1"/>
         <label/>
       </nodes>
-      <nodes xsi:type="ucm.map:StartPoint" name="host approves" id="3502" x="538" y="403" contRef="3099" succ="//@urndef/@specDiagrams.4/@connections.6" scenarioStartPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@startPoints.3">
+      <nodes xsi:type="ucm.map:StartPoint" name="host approves" id="3502" x="538" y="403" contRef="3099" succ="//@urndef/@specDiagrams.4/@connections.6" scenarioStartPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@startPoints.3 //@ucmspec/@scenarioGroups.0/@scenarios.1/@startPoints.3">
         <metadata name="_hits" value="1"/>
         <label deltaX="-2" deltaY="-41"/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
-      <nodes xsi:type="ucm.map:EndPoint" name="" id="3504" x="537" y="312" contRef="3099" succ="//@urndef/@specDiagrams.4/@connections.7" pred="//@urndef/@specDiagrams.4/@connections.13" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@endPoints.5">
+      <nodes xsi:type="ucm.map:EndPoint" name="" id="3504" x="537" y="312" contRef="3099" succ="//@urndef/@specDiagrams.4/@connections.7" pred="//@urndef/@specDiagrams.4/@connections.13" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@endPoints.5 //@ucmspec/@scenarioGroups.0/@scenarios.1/@endPoints.5">
         <metadata name="_hits" value="1"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
@@ -1687,17 +1706,17 @@
       <comments description="Timeout path&#xA;" x="619" y="402" width="98" height="37" fillColor="255,255,200"/>
     </specDiagrams>
     <specDiagrams xsi:type="ucm.map:UCMmap" name="UCM_ConnectToMeeting (Password)" id="4240">
-      <nodes xsi:type="ucm.map:StartPoint" name="Ready to provide password" id="4299" x="238" y="319" contRef="4288" succ="//@urndef/@specDiagrams.5/@connections.0" scenarioStartPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@startPoints.4">
+      <nodes xsi:type="ucm.map:StartPoint" name="Ready to provide password" id="4299" x="238" y="319" contRef="4288" succ="//@urndef/@specDiagrams.5/@connections.0" scenarioStartPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@startPoints.4 //@ucmspec/@scenarioGroups.0/@scenarios.1/@startPoints.4">
         <metadata name="_hits" value="1"/>
         <label/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
-      <nodes xsi:type="ucm.map:EndPoint" name="Connected to meeting" id="4313" x="993" y="296" contRef="4288" pred="//@urndef/@specDiagrams.5/@connections.13" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@endPoints.6">
+      <nodes xsi:type="ucm.map:EndPoint" name="Connected to meeting" id="4313" x="993" y="296" contRef="4288" pred="//@urndef/@specDiagrams.5/@connections.13" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@endPoints.6 //@ucmspec/@scenarioGroups.0/@scenarios.1/@endPoints.6">
         <metadata name="_hits" value="1"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
-      <nodes xsi:type="ucm.map:EndPoint" name="Not connected to meeting" id="4383" x="997" y="433" contRef="4288" pred="//@urndef/@specDiagrams.5/@connections.14" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@endPoints.7">
+      <nodes xsi:type="ucm.map:EndPoint" name="Not connected to meeting" id="4383" x="997" y="433" contRef="4288" pred="//@urndef/@specDiagrams.5/@connections.14" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@endPoints.7 //@ucmspec/@scenarioGroups.0/@scenarios.1/@endPoints.7">
         <metadata name="_hits" value="0"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
@@ -1709,23 +1728,23 @@
         <metadata name="_hits" value="0"/>
       </nodes>
       <nodes xsi:type="ucm.map:OrFork" name="OrFork4615" id="4615" x="427" y="388" contRef="4306" succ="//@urndef/@specDiagrams.5/@connections.5 //@urndef/@specDiagrams.5/@connections.4" pred="//@urndef/@specDiagrams.5/@connections.7">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
       </nodes>
       <nodes xsi:type="ucm.map:OrJoin" name="OrJoin4631" id="4631" x="586" y="322" contRef="4306" succ="//@urndef/@specDiagrams.5/@connections.6" pred="//@urndef/@specDiagrams.5/@connections.10 //@urndef/@specDiagrams.5/@connections.8">
         <metadata name="_hits" value="1"/>
       </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef4665" id="4665" x="409" y="364" contRef="4306" succ="//@urndef/@specDiagrams.5/@connections.7" pred="//@urndef/@specDiagrams.5/@connections.1" respDef="4664">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
         <label deltaX="-46" deltaY="-7"/>
       </nodes>
       <nodes xsi:type="ucm.map:EmptyPoint" name="EmptyPoint4595" id="4595" x="534" y="377" contRef="4306" succ="//@urndef/@specDiagrams.5/@connections.8" pred="//@urndef/@specDiagrams.5/@connections.15">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
       </nodes>
       <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow4674" id="4674" x="493" y="428" contRef="4306" succ="//@urndef/@specDiagrams.5/@connections.9" pred="//@urndef/@specDiagrams.5/@connections.5">
         <metadata name="_hits" value="0"/>
       </nodes>
       <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow4675" id="4675" x="498" y="322" contRef="4306" succ="//@urndef/@specDiagrams.5/@connections.10" pred="//@urndef/@specDiagrams.5/@connections.2">
-        <metadata name="_hits" value="1"/>
+        <metadata name="_hits" value="0"/>
       </nodes>
       <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow4676" id="4676" x="754" y="317" contRef="4306" succ="//@urndef/@specDiagrams.5/@connections.11" pred="//@urndef/@specDiagrams.5/@connections.6">
         <metadata name="_hits" value="1"/>
@@ -1742,7 +1761,7 @@
         <label/>
       </nodes>
       <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow4673" id="4673" x="484" y="383" contRef="4306" succ="//@urndef/@specDiagrams.5/@connections.15" pred="//@urndef/@specDiagrams.5/@connections.4">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
       </nodes>
       <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef4288" id="4288" x="157" y="89" width="920" height="483" contDef="2197" nodes="4299 4383 4313" children="4306">
         <label/>
