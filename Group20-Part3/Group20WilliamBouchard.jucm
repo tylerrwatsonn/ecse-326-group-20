@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="anthonyporporino" created="October 29, 2020 at 8:49:48 AM EDT" modified="November 7, 2020 at 9:32:20 PM EST" specVersion="71" urnVersion="1.27" nextGlobalID="5437">
+<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="anthonyporporino" created="October 29, 2020 at 8:49:48 AM EDT" modified="November 8, 2020 at 11:41:54 AM EST" specVersion="73" urnVersion="1.27" nextGlobalID="5437">
   <ucmspec>
     <scenarioGroups name="ScenarioGroup5" id="5">
       <scenarios name="ScenarioDef6" id="6"/>
@@ -304,12 +304,12 @@
     </intElements>
     <intElements name="Maximize management possibilities of virtual classroom" id="788" linksDest="1312 3179" linksSrc="1310" type="Goal" refs="789">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="90"/>
+      <metadata name="_numEval" value="63"/>
       <metadata name="_qualEval" value="WeaklySatisfied"/>
     </intElements>
     <intElements name="Facilitate teaching of the material" id="810" linksDest="1175 1310 3616" linksSrc="1187" type="Goal" refs="811">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="90"/>
+      <metadata name="_numEval" value="73"/>
       <metadata name="_qualEval" value="WeaklySatisfied"/>
     </intElements>
     <intElements name="Facilitate communication between teacher and groups" id="859" linksDest="2862 2879 3514" linksSrc="981" type="Goal" refs="860">
@@ -353,8 +353,8 @@
     </intElements>
     <intElements name="Minimize distractions for students" id="3594" linksDest="3619 3648 4069 4070" linksSrc="3616" type="Goal" refs="3595">
       <metadata name="_addAggregate" value="disable"/>
-      <metadata name="_numEval" value="16"/>
-      <metadata name="_qualEval" value="WeaklySatisfied"/>
+      <metadata name="_numEval" value="-22"/>
+      <metadata name="_qualEval" value="WeaklyDenied"/>
     </intElements>
     <actors name="Teaching Staff" id="4201" contRefs="4202">
       <metadata name="_numEval" value="0"/>
@@ -410,8 +410,8 @@
     <links xsi:type="grl:Contribution" name="Contribution636" id="636" refs="//@urndef/@specDiagrams.1/@connections.0" dest="533" src="620" contribution="SomePositive" quantitativeContribution="75"/>
     <links xsi:type="grl:Contribution" name="Contribution637" id="637" refs="//@urndef/@specDiagrams.1/@connections.1" dest="533" src="622" contribution="SomePositive" quantitativeContribution="75"/>
     <links xsi:type="grl:Contribution" name="Contribution960" id="960" refs="//@urndef/@specDiagrams.1/@connections.2" dest="620" src="669" contribution="SomePositive" quantitativeContribution="75"/>
-    <links xsi:type="grl:Contribution" name="Contribution961" id="961" refs="//@urndef/@specDiagrams.1/@connections.3" dest="620" src="911" contribution="SomePositive" quantitativeContribution="75"/>
-    <links xsi:type="grl:Contribution" name="Contribution981" id="981" refs="//@urndef/@specDiagrams.1/@connections.4" dest="622" src="859" contribution="SomePositive" quantitativeContribution="75"/>
+    <links xsi:type="grl:Contribution" name="Contribution961" id="961" refs="//@urndef/@specDiagrams.1/@connections.3" dest="620" src="911" quantitativeContribution="40"/>
+    <links xsi:type="grl:Contribution" name="Contribution981" id="981" refs="//@urndef/@specDiagrams.1/@connections.4" dest="622" src="859" contribution="SomePositive" quantitativeContribution="50"/>
     <links xsi:type="grl:Contribution" name="Contribution1032" id="1032" refs="//@urndef/@specDiagrams.1/@connections.5" dest="622" src="992" contribution="SomePositive" quantitativeContribution="75"/>
     <links xsi:type="grl:Contribution" name="Contribution1092" id="1092" refs="//@urndef/@specDiagrams.1/@connections.6" dest="622" src="1061"/>
     <links xsi:type="grl:Contribution" name="Contribution1175" id="1175" refs="//@urndef/@specDiagrams.1/@connections.7" dest="810" src="1061" contribution="SomePositive" quantitativeContribution="75"/>
@@ -419,7 +419,7 @@
     <links xsi:type="grl:Contribution" name="Contribution1187" id="1187" refs="//@urndef/@specDiagrams.1/@connections.9" dest="748" src="810" contribution="SomePositive" quantitativeContribution="75"/>
     <links xsi:type="grl:Contribution" name="Contribution1254" id="1254" refs="//@urndef/@specDiagrams.1/@connections.10" dest="622" src="1221" contribution="SomePositive" quantitativeContribution="75"/>
     <links xsi:type="grl:Contribution" name="Contribution1310" id="1310" refs="//@urndef/@specDiagrams.1/@connections.11" dest="810" src="788" contribution="SomePositive" quantitativeContribution="75"/>
-    <links xsi:type="grl:Contribution" name="Contribution1312" id="1312" refs="//@urndef/@specDiagrams.1/@connections.12" dest="788" src="1190" contribution="SomePositive" quantitativeContribution="75"/>
+    <links xsi:type="grl:Contribution" name="Contribution1312" id="1312" refs="//@urndef/@specDiagrams.1/@connections.12" dest="788" src="1190"/>
     <links xsi:type="grl:Contribution" name="Contribution2840" id="2840" refs="//@urndef/@specDiagrams.1/@connections.13" dest="669" src="402"/>
     <links xsi:type="grl:Contribution" name="Contribution2841" id="2841" refs="//@urndef/@specDiagrams.1/@connections.14" dest="669" src="300" contribution="SomePositive" quantitativeContribution="50"/>
     <links xsi:type="grl:Contribution" name="Contribution2842" id="2842" refs="//@urndef/@specDiagrams.1/@connections.15" dest="669" src="304" contribution="SomePositive" quantitativeContribution="75"/>
@@ -430,19 +430,19 @@
     <links xsi:type="grl:Contribution" name="Contribution2882" id="2882" refs="//@urndef/@specDiagrams.1/@connections.20" dest="992" src="76" contribution="SomePositive" quantitativeContribution="75"/>
     <links xsi:type="grl:Contribution" name="Contribution2884" id="2884" refs="//@urndef/@specDiagrams.1/@connections.21" dest="1061" src="248" contribution="SomePositive" quantitativeContribution="50"/>
     <links xsi:type="grl:Contribution" name="Contribution3128" id="3128" refs="//@urndef/@specDiagrams.1/@connections.22" dest="1190" src="70" contribution="SomePositive" quantitativeContribution="75"/>
-    <links xsi:type="grl:Contribution" name="Contribution3179" id="3179" refs="//@urndef/@specDiagrams.1/@connections.23" dest="788" src="3140" contribution="SomePositive" quantitativeContribution="75"/>
+    <links xsi:type="grl:Contribution" name="Contribution3179" id="3179" refs="//@urndef/@specDiagrams.1/@connections.23" dest="788" src="3140" contribution="SomePositive" quantitativeContribution="50"/>
     <links xsi:type="grl:Contribution" name="Contribution3514" id="3514" refs="//@urndef/@specDiagrams.1/@connections.24" dest="859" src="117" contribution="SomePositive" quantitativeContribution="50"/>
     <links xsi:type="grl:Contribution" name="Contribution3515" id="3515" refs="//@urndef/@specDiagrams.1/@connections.25" dest="1221" src="117" contribution="SomePositive" quantitativeContribution="50"/>
     <links xsi:type="grl:Contribution" name="Contribution3526" id="3526" refs="//@urndef/@specDiagrams.1/@connections.26" dest="3140" src="191" contribution="SomePositive" quantitativeContribution="75"/>
     <links xsi:type="grl:Contribution" name="Contribution3527" id="3527" refs="//@urndef/@specDiagrams.1/@connections.27" dest="3140" src="184" contribution="SomePositive" quantitativeContribution="75"/>
     <links xsi:type="grl:Contribution" name="Contribution3528" id="3528" refs="//@urndef/@specDiagrams.1/@connections.28" dest="3140" src="387" contribution="SomePositive" quantitativeContribution="75"/>
-    <links xsi:type="grl:Contribution" name="Contribution3616" id="3616" refs="//@urndef/@specDiagrams.1/@connections.29" dest="810" src="3594" contribution="SomePositive" quantitativeContribution="75"/>
-    <links xsi:type="grl:Contribution" name="Contribution3619" id="3619" refs="//@urndef/@specDiagrams.1/@connections.30" dest="3594" src="1190" contribution="SomePositive" quantitativeContribution="75"/>
+    <links xsi:type="grl:Contribution" name="Contribution3616" id="3616" refs="//@urndef/@specDiagrams.1/@connections.29" dest="810" src="3594" contribution="SomePositive" quantitativeContribution="50"/>
+    <links xsi:type="grl:Contribution" name="Contribution3619" id="3619" refs="//@urndef/@specDiagrams.1/@connections.30" dest="3594" src="1190"/>
     <links xsi:type="grl:Contribution" name="Contribution3648" id="3648" refs="//@urndef/@specDiagrams.1/@connections.31" dest="3594" src="76" contribution="Hurt" quantitativeContribution="-25"/>
     <links xsi:type="grl:Contribution" name="Contribution3529" id="3529" refs="//@urndef/@specDiagrams.1/@connections.32" dest="3140" src="115" contribution="SomePositive" quantitativeContribution="75"/>
     <links xsi:type="grl:Contribution" name="Contribution4069" id="4069" refs="//@urndef/@specDiagrams.1/@connections.33" dest="3594" src="82" contribution="Hurt" quantitativeContribution="-5"/>
     <links xsi:type="grl:Contribution" name="Contribution4070" id="4070" refs="//@urndef/@specDiagrams.1/@connections.34" dest="3594" src="425" contribution="Hurt" quantitativeContribution="-10"/>
-    <links xsi:type="grl:Contribution" name="Contribution4176" id="4176" refs="//@urndef/@specDiagrams.1/@connections.35" dest="533" src="425" contribution="SomePositive" quantitativeContribution="75"/>
+    <links xsi:type="grl:Contribution" name="Contribution4176" id="4176" refs="//@urndef/@specDiagrams.1/@connections.35" dest="533" src="425" contribution="SomePositive" quantitativeContribution="50"/>
     <links xsi:type="grl:Contribution" name="Contribution4177" id="4177" refs="//@urndef/@specDiagrams.1/@connections.36" dest="533" src="82"/>
     <groups name="StrategiesGroup3" id="3" strategies="4 386 436 438 452"/>
     <strategies name="Zoom" id="4" author="anthonyporporino" group="3">
@@ -1775,22 +1775,22 @@
       <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow5064" id="5064" x="838" y="385" succ="//@urndef/@specDiagrams.4/@connections.14" pred="//@urndef/@specDiagrams.4/@connections.7"/>
       <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow5065" id="5065" x="1065" y="346" succ="//@urndef/@specDiagrams.4/@connections.15" pred="//@urndef/@specDiagrams.4/@connections.3"/>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef5435" id="5435" x="718" y="351" contRef="4788" succ="//@urndef/@specDiagrams.4/@connections.16" pred="//@urndef/@specDiagrams.4/@connections.1" respDef="5434">
-        <label/>
+        <label deltaX="-43" deltaY="5"/>
       </nodes>
       <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef4788" id="4788" x="19" y="195" width="1372" height="318" contDef="4753" nodes="5435">
         <label/>
       </contRefs>
       <connections xsi:type="ucm.map:NodeConnection" source="4741" target="5042"/>
       <connections xsi:type="ucm.map:NodeConnection" source="4796" target="5435">
-        <condition deltaX="11" deltaY="-7" label="random assignment chosen" expression="assignmentSchema == RANDOM&#xA;" description=""/>
+        <condition deltaX="33" deltaY="25" label="random" expression="assignmentSchema == RANDOM&#xA;" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="4796" target="4881">
-        <condition deltaX="202" deltaY="21" label="manual assignment selected" expression="assignmentSchema == MANUAL" description=""/>
+        <condition deltaX="82" deltaY="17" label="manual" expression="assignmentSchema == MANUAL" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="4871" target="5065"/>
       <connections xsi:type="ucm.map:NodeConnection" source="4881" target="5063"/>
       <connections xsi:type="ucm.map:NodeConnection" source="4796" target="4967">
-        <condition deltaX="293" deltaY="2" label="allow students to assign themselves selected" expression="assignmentSchema == FREE" description=""/>
+        <condition deltaX="90" deltaY="6" label="free" expression="assignmentSchema == FREE" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="4964" target="4796"/>
       <connections xsi:type="ucm.map:NodeConnection" source="4967" target="5064">
