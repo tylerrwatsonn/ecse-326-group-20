@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="anthonyporporino" created="October 29, 2020 at 8:49:48 AM EDT" modified="November 8, 2020 at 2:49:25 PM EST" specVersion="87" urnVersion="1.27" nextGlobalID="2062">
+<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="anthonyporporino" created="October 29, 2020 at 8:49:48 AM EDT" modified="November 8, 2020 at 6:02:14 PM EST" specVersion="91" urnVersion="1.27" nextGlobalID="2111">
   <ucmspec>
     <scenarioGroups name="ScenarioGroup5" id="5">
-      <scenarios name="ScenarioDef6" id="6"/>
+      <scenarios name="Sharing specified window" id="6">
+        <initializations value="false" variable="2103"/>
+        <initializations value="false" variable="2104"/>
+        <startPoints enabled="true" startPoint="1165"/>
+        <startPoints enabled="true" startPoint="1798"/>
+        <startPoints enabled="true" startPoint="1867"/>
+        <endPoints enabled="true" mandatory="true" endPoint="1428"/>
+        <endPoints enabled="true" mandatory="true" endPoint="2052"/>
+      </scenarios>
+      <scenarios name="Sharing whole screen" id="2105">
+        <initializations value="true" variable="2103"/>
+        <initializations value="false" variable="2104"/>
+        <startPoints enabled="true" startPoint="1165"/>
+        <startPoints enabled="true" startPoint="1798"/>
+        <endPoints enabled="true" mandatory="true" endPoint="1428"/>
+        <endPoints enabled="true" mandatory="true" endPoint="1800"/>
+      </scenarios>
     </scenarioGroups>
+    <variables name="whole_screen" id="2103"/>
+    <variables name="window_specified" id="2104"/>
   </ucmspec>
   <grlspec>
     <intElements xsi:type="fm:Feature" name="Mute Audio" id="70" linksSrc="112" type="Task" refs="71">
@@ -1264,71 +1282,106 @@
       <comments description="Based on the family of existing videoconferencing systems analysed, we see that applications like BlueJeans, Google Meet, Zoom, and to some extent Discord, are more suited for the goals of the student stakeholder. This is because these products provide features affecting positively two key goals of students, the simulation of a real-life class expeirence with interactivity and group collaboration, as well as features maximizing the students' concentration in class, such as screen sharing, chat and interactivity. Furthermore, these features have a ripple effect which leads to affecting positively the main goal of a vast majority of students, which is maximizing results and the amount of information learned." x="-70" y="-178" width="302" height="190" fillColor="255,255,200"/>
     </specDiagrams>
     <specDiagrams xsi:type="ucm.map:UCMmap" name="Screen sharing" id="1159">
-      <nodes xsi:type="ucm.map:StartPoint" name="Ready to screen share" id="1165" x="71" y="239" succ="//@urndef/@specDiagrams.2/@connections.0">
+      <nodes xsi:type="ucm.map:StartPoint" name="Ready to screen share" id="1165" x="71" y="239" succ="//@urndef/@specDiagrams.2/@connections.0" scenarioStartPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@startPoints.0 //@ucmspec/@scenarioGroups.0/@scenarios.1/@startPoints.0">
+        <metadata name="_hits" value="1"/>
         <label/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
-      <nodes xsi:type="ucm.map:EndPoint" name="Screen sharing ended" id="1428" x="897" y="248" pred="//@urndef/@specDiagrams.2/@connections.6">
+      <nodes xsi:type="ucm.map:EndPoint" name="Screen sharing ended" id="1428" x="897" y="248" pred="//@urndef/@specDiagrams.2/@connections.6" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@endPoints.0 //@ucmspec/@scenarioGroups.0/@scenarios.1/@endPoints.0">
+        <metadata name="_hits" value="0"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
-      <nodes xsi:type="ucm.map:OrFork" name="OrFork1431" id="1431" x="326" y="271" succ="//@urndef/@specDiagrams.2/@connections.1 //@urndef/@specDiagrams.2/@connections.2" pred="//@urndef/@specDiagrams.2/@connections.5"/>
-      <nodes xsi:type="ucm.map:EmptyPoint" name="EmptyPoint1432" id="1432" x="369" y="121" succ="//@urndef/@specDiagrams.2/@connections.3" pred="//@urndef/@specDiagrams.2/@connections.2"/>
-      <nodes xsi:type="ucm.map:EmptyPoint" name="EmptyPoint1461" id="1461" x="388" y="384" succ="//@urndef/@specDiagrams.2/@connections.4" pred="//@urndef/@specDiagrams.2/@connections.1"/>
+      <nodes xsi:type="ucm.map:OrFork" name="OrFork1431" id="1431" x="326" y="271" succ="//@urndef/@specDiagrams.2/@connections.1 //@urndef/@specDiagrams.2/@connections.2" pred="//@urndef/@specDiagrams.2/@connections.5">
+        <metadata name="_hits" value="1"/>
+      </nodes>
+      <nodes xsi:type="ucm.map:EmptyPoint" name="EmptyPoint1432" id="1432" x="369" y="121" succ="//@urndef/@specDiagrams.2/@connections.3" pred="//@urndef/@specDiagrams.2/@connections.2">
+        <metadata name="_hits" value="0"/>
+      </nodes>
+      <nodes xsi:type="ucm.map:EmptyPoint" name="EmptyPoint1461" id="1461" x="388" y="384" succ="//@urndef/@specDiagrams.2/@connections.4" pred="//@urndef/@specDiagrams.2/@connections.1">
+        <metadata name="_hits" value="1"/>
+      </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef1463" id="1463" x="236" y="240" succ="//@urndef/@specDiagrams.2/@connections.5" pred="//@urndef/@specDiagrams.2/@connections.0" respDef="1462">
+        <metadata name="_hits" value="1"/>
         <label/>
       </nodes>
-      <nodes xsi:type="ucm.map:OrJoin" name="OrJoin1535" id="1535" x="807" y="250" succ="//@urndef/@specDiagrams.2/@connections.6" pred="//@urndef/@specDiagrams.2/@connections.8 //@urndef/@specDiagrams.2/@connections.7"/>
-      <nodes xsi:type="ucm.map:EmptyPoint" name="EmptyPoint1546" id="1546" x="764" y="119" succ="//@urndef/@specDiagrams.2/@connections.7" pred="//@urndef/@specDiagrams.2/@connections.9"/>
-      <nodes xsi:type="ucm.map:EmptyPoint" name="EmptyPoint1557" id="1557" x="769" y="392" succ="//@urndef/@specDiagrams.2/@connections.8" pred="//@urndef/@specDiagrams.2/@connections.10"/>
-      <nodes xsi:type="ucm.map:Stub" name="Share whole screen" id="1558" x="561" y="115" contRef="1446" succ="//@urndef/@specDiagrams.2/@connections.9" pred="//@urndef/@specDiagrams.2/@connections.3" dynamic="true">
-        <label/>
+      <nodes xsi:type="ucm.map:OrJoin" name="OrJoin1535" id="1535" x="807" y="250" succ="//@urndef/@specDiagrams.2/@connections.6" pred="//@urndef/@specDiagrams.2/@connections.8 //@urndef/@specDiagrams.2/@connections.7">
+        <metadata name="_hits" value="0"/>
       </nodes>
-      <nodes xsi:type="ucm.map:Stub" name="Share specified window" id="1559" x="560" y="409" contRef="1448" succ="//@urndef/@specDiagrams.2/@connections.10 //@urndef/@specDiagrams.2/@connections.11" pred="//@urndef/@specDiagrams.2/@connections.4" dynamic="true">
-        <label/>
+      <nodes xsi:type="ucm.map:EmptyPoint" name="EmptyPoint1546" id="1546" x="764" y="119" succ="//@urndef/@specDiagrams.2/@connections.7" pred="//@urndef/@specDiagrams.2/@connections.9">
+        <metadata name="_hits" value="0"/>
       </nodes>
-      <nodes xsi:type="ucm.map:EmptyPoint" name="EmptyPoint2051" id="2051" x="627" y="464" contRef="1448" succ="//@urndef/@specDiagrams.2/@connections.12" pred="//@urndef/@specDiagrams.2/@connections.11"/>
-      <nodes xsi:type="ucm.map:EndPoint" name="Screen sharing canceled" id="2052" x="903" y="459" pred="//@urndef/@specDiagrams.2/@connections.12">
+      <nodes xsi:type="ucm.map:EmptyPoint" name="EmptyPoint1557" id="1557" x="769" y="392" succ="//@urndef/@specDiagrams.2/@connections.8" pred="//@urndef/@specDiagrams.2/@connections.10">
+        <metadata name="_hits" value="0"/>
+      </nodes>
+      <nodes xsi:type="ucm.map:EmptyPoint" name="EmptyPoint2051" id="2051" x="627" y="464" contRef="1448" succ="//@urndef/@specDiagrams.2/@connections.12" pred="//@urndef/@specDiagrams.2/@connections.11">
+        <metadata name="_hits" value="1"/>
+      </nodes>
+      <nodes xsi:type="ucm.map:EndPoint" name="Screen sharing canceled" id="2052" x="903" y="459" pred="//@urndef/@specDiagrams.2/@connections.12" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@endPoints.1">
+        <metadata name="_hits" value="1"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
-      <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef1446" id="1446" x="427" y="27" width="275" height="197" contDef="1445" nodes="1558">
+      <nodes xsi:type="ucm.map:Stub" name="Sharing specified window" id="2071" x="560" y="409" contRef="1448" succ="//@urndef/@specDiagrams.2/@connections.10 //@urndef/@specDiagrams.2/@connections.11" pred="//@urndef/@specDiagrams.2/@connections.4">
+        <metadata name="_hits" value="1"/>
+        <label/>
+        <bindings plugin="1808">
+          <in startPoint="1867" stubEntry="//@urndef/@specDiagrams.2/@connections.4"/>
+          <out endPoint="1869" stubExit="//@urndef/@specDiagrams.2/@connections.10"/>
+          <out endPoint="1884" stubExit="//@urndef/@specDiagrams.2/@connections.11"/>
+          <precondition label="" expression="true"/>
+        </bindings>
+      </nodes>
+      <nodes xsi:type="ucm.map:Stub" name="Sharing whole screen" id="2088" x="561" y="115" contRef="1446" succ="//@urndef/@specDiagrams.2/@connections.9" pred="//@urndef/@specDiagrams.2/@connections.3">
+        <metadata name="_hits" value="0"/>
+        <label/>
+        <bindings plugin="1758">
+          <in startPoint="1798" stubEntry="//@urndef/@specDiagrams.2/@connections.3"/>
+          <out endPoint="1800" stubExit="//@urndef/@specDiagrams.2/@connections.9"/>
+          <precondition label="" expression="true"/>
+        </bindings>
+      </nodes>
+      <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef1446" id="1446" x="427" y="27" width="275" height="197" contDef="1445" nodes="2088">
         <label/>
       </contRefs>
-      <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef1448" id="1448" x="420" y="273" width="285" height="218" contDef="1447" nodes="1559 2051">
+      <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef1448" id="1448" x="420" y="273" width="285" height="218" contDef="1447" nodes="2051 2071">
         <label/>
       </contRefs>
       <connections xsi:type="ucm.map:NodeConnection" source="1165" target="1463"/>
       <connections xsi:type="ucm.map:NodeConnection" source="1431" target="1461">
-        <condition deltaX="86" deltaY="-58" label="Not whole screen" expression="true" description=""/>
+        <condition deltaX="86" deltaY="-58" label="Not whole screen" expression="whole_screen=false" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="1431" target="1432">
-        <condition deltaX="73" deltaY="75" label="Whole screen" expression="true" description=""/>
+        <condition deltaX="73" deltaY="75" label="Whole screen" expression="whole_screen=true" description=""/>
       </connections>
-      <connections xsi:type="ucm.map:NodeConnection" source="1432" target="1558"/>
-      <connections xsi:type="ucm.map:NodeConnection" source="1461" target="1559"/>
+      <connections xsi:type="ucm.map:NodeConnection" source="1432" target="2088" inBindings="//@urndef/@specDiagrams.2/@nodes.12/@bindings.0/@in.0"/>
+      <connections xsi:type="ucm.map:NodeConnection" source="1461" target="2071" inBindings="//@urndef/@specDiagrams.2/@nodes.11/@bindings.0/@in.0"/>
       <connections xsi:type="ucm.map:NodeConnection" source="1463" target="1431"/>
       <connections xsi:type="ucm.map:NodeConnection" source="1535" target="1428"/>
       <connections xsi:type="ucm.map:NodeConnection" source="1546" target="1535"/>
       <connections xsi:type="ucm.map:NodeConnection" source="1557" target="1535"/>
-      <connections xsi:type="ucm.map:NodeConnection" source="1558" target="1546"/>
-      <connections xsi:type="ucm.map:NodeConnection" source="1559" target="1557"/>
-      <connections xsi:type="ucm.map:NodeConnection" source="1559" target="2051"/>
+      <connections xsi:type="ucm.map:NodeConnection" source="2088" target="1546" outBindings="//@urndef/@specDiagrams.2/@nodes.12/@bindings.0/@out.0"/>
+      <connections xsi:type="ucm.map:NodeConnection" source="2071" target="1557" outBindings="//@urndef/@specDiagrams.2/@nodes.11/@bindings.0/@out.0"/>
+      <connections xsi:type="ucm.map:NodeConnection" source="2071" target="2051" outBindings="//@urndef/@specDiagrams.2/@nodes.11/@bindings.0/@out.1"/>
       <connections xsi:type="ucm.map:NodeConnection" source="2051" target="2052"/>
     </specDiagrams>
-    <specDiagrams xsi:type="ucm.map:UCMmap" name="Sharing whole screen" id="1758">
-      <nodes xsi:type="ucm.map:StartPoint" name="" id="1798" x="79" y="244" contRef="1797" succ="//@urndef/@specDiagrams.3/@connections.0">
+    <specDiagrams xsi:type="ucm.map:UCMmap" name="Sharing whole screen" id="1758" parentStub="//@urndef/@specDiagrams.2/@nodes.12/@bindings.0">
+      <nodes xsi:type="ucm.map:StartPoint" name="" id="1798" x="79" y="244" contRef="1797" succ="//@urndef/@specDiagrams.3/@connections.0" inBindings="//@urndef/@specDiagrams.2/@nodes.12/@bindings.0/@in.0" scenarioStartPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@startPoints.1 //@ucmspec/@scenarioGroups.0/@scenarios.1/@startPoints.1">
+        <metadata name="_hits" value="1"/>
         <label/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
-      <nodes xsi:type="ucm.map:EndPoint" name="Screen sharing ended" id="1800" x="871" y="244" pred="//@urndef/@specDiagrams.3/@connections.1">
+      <nodes xsi:type="ucm.map:EndPoint" name="Screen sharing ended" id="1800" x="871" y="244" pred="//@urndef/@specDiagrams.3/@connections.1" outBindings="//@urndef/@specDiagrams.2/@nodes.12/@bindings.0/@out.0" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.1/@endPoints.1">
+        <metadata name="_hits" value="1"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:WaitingPlace" name="Wait for user sharing his screen to stop the sharing" id="1807" x="369" y="245" contRef="1797" succ="//@urndef/@specDiagrams.3/@connections.1" pred="//@urndef/@specDiagrams.3/@connections.2">
+        <metadata name="_hits" value="1"/>
         <label/>
       </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef2049" id="2049" x="159" y="246" contRef="1797" succ="//@urndef/@specDiagrams.3/@connections.2" pred="//@urndef/@specDiagrams.3/@connections.0" respDef="1961">
+        <metadata name="_hits" value="1"/>
         <label/>
       </nodes>
       <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef1797" id="1797" x="26" y="76" width="739" height="364" contDef="1445" nodes="1798 1807 2049">
@@ -1340,29 +1393,41 @@
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="2049" target="1807"/>
     </specDiagrams>
-    <specDiagrams xsi:type="ucm.map:UCMmap" name="Sharing specified window" id="1808">
-      <nodes xsi:type="ucm.map:StartPoint" name="" id="1867" x="68" y="284" contRef="1865" succ="//@urndef/@specDiagrams.4/@connections.0">
+    <specDiagrams xsi:type="ucm.map:UCMmap" name="Sharing specified window" id="1808" parentStub="//@urndef/@specDiagrams.2/@nodes.11/@bindings.0">
+      <nodes xsi:type="ucm.map:StartPoint" name="" id="1867" x="68" y="284" contRef="1865" succ="//@urndef/@specDiagrams.4/@connections.0" inBindings="//@urndef/@specDiagrams.2/@nodes.11/@bindings.0/@in.0" scenarioStartPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@startPoints.2">
+        <metadata name="_hits" value="2"/>
         <label/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
-      <nodes xsi:type="ucm.map:EmptyPoint" name="EmptyPoint1868" id="1868" x="353" y="332" contRef="1865" succ="//@urndef/@specDiagrams.4/@connections.1" pred="//@urndef/@specDiagrams.4/@connections.3"/>
-      <nodes xsi:type="ucm.map:EndPoint" name="Screen sharing ended" id="1869" x="907" y="332" pred="//@urndef/@specDiagrams.4/@connections.7">
+      <nodes xsi:type="ucm.map:EmptyPoint" name="EmptyPoint1868" id="1868" x="353" y="332" contRef="1865" succ="//@urndef/@specDiagrams.4/@connections.1" pred="//@urndef/@specDiagrams.4/@connections.3">
+        <metadata name="_hits" value="0"/>
+      </nodes>
+      <nodes xsi:type="ucm.map:EndPoint" name="Screen sharing ended" id="1869" x="907" y="332" pred="//@urndef/@specDiagrams.4/@connections.7" outBindings="//@urndef/@specDiagrams.2/@nodes.11/@bindings.0/@out.0">
+        <metadata name="_hits" value="0"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef1876" id="1876" x="156" y="280" contRef="1865" succ="//@urndef/@specDiagrams.4/@connections.2" pred="//@urndef/@specDiagrams.4/@connections.0" respDef="1875">
+        <metadata name="_hits" value="2"/>
         <label/>
       </nodes>
-      <nodes xsi:type="ucm.map:OrFork" name="OrFork1882" id="1882" x="312" y="280" contRef="1865" succ="//@urndef/@specDiagrams.4/@connections.3 //@urndef/@specDiagrams.4/@connections.4" pred="//@urndef/@specDiagrams.4/@connections.2"/>
-      <nodes xsi:type="ucm.map:EmptyPoint" name="EmptyPoint1883" id="1883" x="348" y="201" contRef="1865" succ="//@urndef/@specDiagrams.4/@connections.5" pred="//@urndef/@specDiagrams.4/@connections.4"/>
-      <nodes xsi:type="ucm.map:EndPoint" name="Screen sharing canceled" id="1884" x="334" y="62" pred="//@urndef/@specDiagrams.4/@connections.5">
+      <nodes xsi:type="ucm.map:OrFork" name="OrFork1882" id="1882" x="312" y="280" contRef="1865" succ="//@urndef/@specDiagrams.4/@connections.3 //@urndef/@specDiagrams.4/@connections.4" pred="//@urndef/@specDiagrams.4/@connections.2">
+        <metadata name="_hits" value="2"/>
+      </nodes>
+      <nodes xsi:type="ucm.map:EmptyPoint" name="EmptyPoint1883" id="1883" x="348" y="201" contRef="1865" succ="//@urndef/@specDiagrams.4/@connections.5" pred="//@urndef/@specDiagrams.4/@connections.4">
+        <metadata name="_hits" value="2"/>
+      </nodes>
+      <nodes xsi:type="ucm.map:EndPoint" name="Screen sharing canceled" id="1884" x="334" y="62" pred="//@urndef/@specDiagrams.4/@connections.5" outBindings="//@urndef/@specDiagrams.2/@nodes.11/@bindings.0/@out.1">
+        <metadata name="_hits" value="2"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef1962" id="1962" x="442" y="343" contRef="1865" succ="//@urndef/@specDiagrams.4/@connections.6" pred="//@urndef/@specDiagrams.4/@connections.1" respDef="1961">
+        <metadata name="_hits" value="0"/>
         <label/>
       </nodes>
       <nodes xsi:type="ucm.map:WaitingPlace" name="Wait for user sharing his screen to stop sharing" id="1965" x="675" y="338" contRef="1865" succ="//@urndef/@specDiagrams.4/@connections.7" pred="//@urndef/@specDiagrams.4/@connections.6">
+        <metadata name="_hits" value="0"/>
         <label/>
       </nodes>
       <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef1865" id="1865" x="16" y="105" width="812" height="358" contDef="1447" nodes="1867 1868 1876 1882 1883 1962 1965">
@@ -1372,10 +1437,10 @@
       <connections xsi:type="ucm.map:NodeConnection" source="1868" target="1962"/>
       <connections xsi:type="ucm.map:NodeConnection" source="1876" target="1882"/>
       <connections xsi:type="ucm.map:NodeConnection" source="1882" target="1868">
-        <condition deltaX="111" deltaY="-4" label="Window specified" expression="true" description=""/>
+        <condition deltaX="111" deltaY="-4" label="Window specified" expression="window_specified=true" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="1882" target="1883">
-        <condition deltaX="132" deltaY="12" label="No window specified" expression="true" description=""/>
+        <condition deltaX="132" deltaY="12" label="No window specified" expression="window_specified=false" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="1883" target="1884"/>
       <connections xsi:type="ucm.map:NodeConnection" source="1962" target="1965"/>
