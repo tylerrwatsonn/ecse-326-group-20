@@ -1372,7 +1372,7 @@
       <connections xsi:type="ucm.map:NodeConnection" source="4228" target="4093"/>
       <connections xsi:type="ucm.map:NodeConnection" source="4230" target="3833"/>
     </specDiagrams>
-    <components name="Participant" id="2207" contRefs="2368"/>
+    <components name="Participant" id="2207"/>
     <components name="Component2377" id="2377"/>
     <components name="Component2499" id="2499"/>
     <components name="Host" id="2938" contRefs="2939 3809"/>
