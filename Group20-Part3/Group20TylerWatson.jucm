@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="anthonyporporino" created="October 29, 2020 at 8:49:48 AM EDT" modified="November 8, 2020 at 5:57:23 PM EST" specVersion="181" urnVersion="1.27" nextGlobalID="2763">
+<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="anthonyporporino" created="October 29, 2020 at 8:49:48 AM EDT" modified="November 8, 2020 at 6:36:13 PM EST" specVersion="184" urnVersion="1.27" nextGlobalID="2768">
   <ucmspec>
     <scenarioGroups name="ScenarioGroup5" id="5">
       <scenarios name="public chat, file upload" id="2690">
         <initializations value="false" variable="1764"/>
         <initializations value="true" variable="2400"/>
+        <initializations value="false" variable="2766"/>
         <startPoints enabled="true" startPoint="1390"/>
         <startPoints enabled="true" startPoint="1430"/>
         <startPoints enabled="true" startPoint="2058"/>
@@ -28,6 +29,7 @@
     <variables name="exit" id="1764"/>
     <variables name="uploaded" id="2400"/>
     <variables name="clickOnUserName" id="2738"/>
+    <variables name="browseForFile" id="2766"/>
   </ucmspec>
   <grlspec>
     <intElements xsi:type="fm:Feature" name="Mute Audio" id="70" linksSrc="112" type="Task" refs="71">
@@ -1356,13 +1358,13 @@
         <bindings plugin="1428">
           <in startPoint="1430" stubEntry="//@urndef/@specDiagrams.2/@connections.0"/>
           <out endPoint="1431" stubExit="//@urndef/@specDiagrams.2/@connections.8"/>
-          <precondition label="public" expression="true" description=""/>
+          <precondition label="" expression="true"/>
         </bindings>
         <bindings plugin="1541">
           <in startPoint="1546" stubEntry="//@urndef/@specDiagrams.2/@connections.0"/>
           <out endPoint="1617" stubExit="//@urndef/@specDiagrams.2/@connections.8"/>
           <out endPoint="1743" stubExit="//@urndef/@specDiagrams.2/@connections.3"/>
-          <precondition label="direct" expression="true" description=""/>
+          <precondition label="" expression="true"/>
         </bindings>
       </nodes>
       <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef1409" id="1409" x="666" y="240" width="159" height="149" contDef="1408" nodes="1421">
@@ -1371,7 +1373,7 @@
       <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef1411" id="1411" x="284" y="231" width="272" height="155" contDef="1410" nodes="2731">
         <label/>
       </contRefs>
-      <connections xsi:type="ucm.map:NodeConnection" source="1390" target="2731" inBindings="//@urndef/@specDiagrams.2/@nodes.8/@bindings.0/@in.0 //@urndef/@specDiagrams.2/@nodes.8/@bindings.1/@in.0"/>
+      <connections xsi:type="ucm.map:NodeConnection" source="1390" target="2731" inBindings="//@urndef/@specDiagrams.2/@nodes.8/@bindings.1/@in.0 //@urndef/@specDiagrams.2/@nodes.8/@bindings.0/@in.0"/>
       <connections xsi:type="ucm.map:NodeConnection" source="1399" target="1392"/>
       <connections xsi:type="ucm.map:NodeConnection" source="1421" target="1399" outBindings="//@urndef/@specDiagrams.2/@nodes.3/@bindings.0/@out.0 //@urndef/@specDiagrams.2/@nodes.3/@bindings.1/@out.0"/>
       <connections xsi:type="ucm.map:NodeConnection" source="2731" target="2714" outBindings="//@urndef/@specDiagrams.2/@nodes.8/@bindings.1/@out.1"/>
@@ -1380,7 +1382,7 @@
       <connections xsi:type="ucm.map:NodeConnection" source="2711" target="2708"/>
       <connections xsi:type="ucm.map:NodeConnection" source="2714" target="2708"/>
       <connections xsi:type="ucm.map:NodeConnection" source="2731" target="1421" inBindings="//@urndef/@specDiagrams.2/@nodes.3/@bindings.0/@in.0 //@urndef/@specDiagrams.2/@nodes.3/@bindings.1/@in.0" outBindings="//@urndef/@specDiagrams.2/@nodes.8/@bindings.0/@out.0 //@urndef/@specDiagrams.2/@nodes.8/@bindings.1/@out.0"/>
-      <comments description="Design decision that in a single message, a user can either write the message as text OR upload a file to send but cannot have text and a file in the same message.&#xA;**Note: for some reason, the evaluation of the strategy does not go past the first stub but the bindings have been setup" x="141" y="59" width="285" height="86" fillColor="255,255,200"/>
+      <comments description="Design decision that in a single message, a user can either write the message as text OR upload a file to send but cannot have text and a file in the same message." x="141" y="59" width="370" height="122" fillColor="255,255,200"/>
     </specDiagrams>
     <specDiagrams xsi:type="ucm.map:UCMmap" name="UCM_Chat (public message)" toLinks="//@urnLinks.2" id="1428" parentStub="//@urndef/@specDiagrams.2/@nodes.8/@bindings.0">
       <nodes xsi:type="ucm.map:RespRef" name="RespRef1403" id="1429" x="476" y="314" contRef="1491" succ="//@urndef/@specDiagrams.3/@connections.1" pred="//@urndef/@specDiagrams.3/@connections.0" respDef="1402">
@@ -1524,10 +1526,10 @@
       </contRefs>
       <connections xsi:type="ucm.map:NodeConnection" source="2058" target="2310"/>
       <connections xsi:type="ucm.map:NodeConnection" source="2750" target="2217">
-        <condition label="" expression="true"/>
+        <condition deltaX="99" deltaY="-3" label="dragNDrop" expression="browseForFile=false" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="2750" target="2202">
-        <condition label="" expression="true"/>
+        <condition deltaX="78" deltaY="16" label="browse" expression="browseForFile=true" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="2751" target="2265"/>
       <connections xsi:type="ucm.map:NodeConnection" source="2202" target="2751"/>
