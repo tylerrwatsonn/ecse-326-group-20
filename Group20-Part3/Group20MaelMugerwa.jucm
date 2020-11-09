@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="anthonyporporino" created="October 29, 2020 at 8:49:48 AM EDT" modified="November 8, 2020 at 10:49:37 PM EST" specVersion="92" urnVersion="1.27" nextGlobalID="6243">
+<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="anthonyporporino" created="November 8, 2020 10:52:25 PM EST" modified="November 8, 2020 11:07:54 PM EST" specVersion="96" urnVersion="1.27" nextGlobalID="6261">
   <ucmspec>
     <scenarioGroups name="ScenarioGroup5" id="5">
-      <scenarios name="host shares slides with meeting" id="6"/>
-      <scenarios name="host helps a group upon request" id="6207"/>
+      <scenarios name="host cancels interaction with multiple groups" id="6">
+        <initializations value="false" variable="6256"/>
+        <initializations value="true" variable="6260"/>
+        <startPoints enabled="true" startPoint="530"/>
+        <endPoints enabled="true" mandatory="true" endPoint="1207"/>
+      </scenarios>
+      <scenarios name="host joins a specific group" id="6207">
+        <initializations value="true" variable="6259"/>
+        <initializations value="false" variable="6260"/>
+        <initializations value="true" variable="6261"/>
+        <startPoints enabled="true" startPoint="530"/>
+        <startPoints enabled="true" startPoint="1404"/>
+        <endPoints enabled="true" mandatory="true" endPoint="1117"/>
+        <endPoints enabled="true" mandatory="true" endPoint="1405"/>
+      </scenarios>
     </scenarioGroups>
+    <variables name="continue_to_multiple_groups" id="6256"/>
+    <variables name="continue_to_single_group" id="6259"/>
+    <variables name="interact_with_all_groups" id="6260"/>
+    <variables name="host_chooses_to_join_a_group" id="6261"/>
   </ucmspec>
   <grlspec>
     <intElements xsi:type="fm:Feature" name="Mute Audio" id="70" linksSrc="112" type="Task" refs="71">
@@ -1380,21 +1397,21 @@
       <comments description="Here are the results of each strategy&#xD;&#xA;BlueJeans: 81&#xD;&#xA;Discord: 71&#xD;&#xA;Google Meet: 70&#xD;&#xA;Twitch: 25&#xD;&#xA;Zoom: 75&#xD;&#xA;&#xD;&#xA;Blue jeans offers every necessary features and offers all the collaboration tools. It's only missing some useful host to group interaction features that would make the host answering group questions easier. It is the best possible existing product for this stakeholder.&#xD;&#xA;&#xD;&#xA;Zoom is also a good contender, it adds the possibility of the host to broadcast a message to every group but loses the whiteboard feature for intragroup collaboration" x="1794" y="92" width="389" height="320" fillColor="255,255,200"/>
     </specDiagrams>
     <specDiagrams xsi:type="ucm.map:UCMmap" name="UCM_HostToGroupInteraction (Main)" id="529">
-      <nodes xsi:type="ucm.map:StartPoint" name="logged into meeting as host" id="530" x="109" y="350" succ="//@urndef/@specDiagrams.2/@connections.0">
-        <metadata name="_hits" value="0"/>
+      <nodes xsi:type="ucm.map:StartPoint" name="logged into meeting as host" id="530" x="109" y="350" succ="//@urndef/@specDiagrams.2/@connections.0" scenarioStartPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@startPoints.0 //@ucmspec/@scenarioGroups.0/@scenarios.1/@startPoints.0">
+        <metadata name="_hits" value="1"/>
         <label/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:OrFork" name="OrFork1115" id="1115" x="317" y="337" succ="//@urndef/@specDiagrams.2/@connections.1 //@urndef/@specDiagrams.2/@connections.2" pred="//@urndef/@specDiagrams.2/@connections.0">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
       </nodes>
-      <nodes xsi:type="ucm.map:EndPoint" name="done interacting" id="1117" x="892" y="350" pred="//@urndef/@specDiagrams.2/@connections.3">
-        <metadata name="_hits" value="0"/>
+      <nodes xsi:type="ucm.map:EndPoint" name="done interacting" id="1117" x="892" y="350" pred="//@urndef/@specDiagrams.2/@connections.3" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.1/@endPoints.0">
+        <metadata name="_hits" value="1"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:OrJoin" name="OrJoin1174" id="1174" x="769" y="343" succ="//@urndef/@specDiagrams.2/@connections.3" pred="//@urndef/@specDiagrams.2/@connections.4 //@urndef/@specDiagrams.2/@connections.10">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
       </nodes>
       <nodes xsi:type="ucm.map:Stub" name="interact with all groups" id="1195" x="601" y="453" contRef="1301" succ="//@urndef/@specDiagrams.2/@connections.4" pred="//@urndef/@specDiagrams.2/@connections.5" dynamic="true">
         <metadata name="_hits" value="0"/>
@@ -1413,25 +1430,31 @@
       <nodes xsi:type="ucm.map:OrFork" name="OrFork1205" id="1205" x="415" y="448" succ="//@urndef/@specDiagrams.2/@connections.5 //@urndef/@specDiagrams.2/@connections.6" pred="//@urndef/@specDiagrams.2/@connections.2">
         <metadata name="_hits" value="0"/>
       </nodes>
-      <nodes xsi:type="ucm.map:EndPoint" name="cancelled interaction" id="1207" x="876" y="647" pred="//@urndef/@specDiagrams.2/@connections.9">
+      <nodes xsi:type="ucm.map:EndPoint" name="cancelled interaction" id="1207" x="876" y="647" pred="//@urndef/@specDiagrams.2/@connections.12" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@endPoints.0">
         <metadata name="_hits" value="0"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:OrFork" name="OrFork1226" id="1226" x="460" y="224" succ="//@urndef/@specDiagrams.2/@connections.7 //@urndef/@specDiagrams.2/@connections.8" pred="//@urndef/@specDiagrams.2/@connections.1">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
       </nodes>
-      <nodes xsi:type="ucm.map:OrJoin" name="OrJoin1240" id="1240" x="484" y="657" succ="//@urndef/@specDiagrams.2/@connections.9" pred="//@urndef/@specDiagrams.2/@connections.6 //@urndef/@specDiagrams.2/@connections.8">
+      <nodes xsi:type="ucm.map:OrJoin" name="OrJoin1240" id="1240" x="484" y="657" succ="//@urndef/@specDiagrams.2/@connections.9" pred="//@urndef/@specDiagrams.2/@connections.6 //@urndef/@specDiagrams.2/@connections.11">
         <metadata name="_hits" value="0"/>
       </nodes>
       <nodes xsi:type="ucm.map:Stub" name="interact with one group" id="1409" x="624" y="226" contRef="1297" succ="//@urndef/@specDiagrams.2/@connections.10" pred="//@urndef/@specDiagrams.2/@connections.7">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="1"/>
         <label/>
         <bindings plugin="1402">
           <in startPoint="1404" stubEntry="//@urndef/@specDiagrams.2/@connections.7"/>
           <out endPoint="1405" stubExit="//@urndef/@specDiagrams.2/@connections.10"/>
           <precondition label="" expression="true"/>
         </bindings>
+      </nodes>
+      <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow6248" id="6248" x="472" y="441" succ="//@urndef/@specDiagrams.2/@connections.11" pred="//@urndef/@specDiagrams.2/@connections.8">
+        <metadata name="_hits" value="0"/>
+      </nodes>
+      <nodes xsi:type="ucm.map:DirectionArrow" name="DirectionArrow6253" id="6253" x="629" y="663" succ="//@urndef/@specDiagrams.2/@connections.12" pred="//@urndef/@specDiagrams.2/@connections.9">
+        <metadata name="_hits" value="0"/>
       </nodes>
       <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef1297" id="1297" x="520" y="155" width="203" height="117" contDef="1296" nodes="1409">
         <label/>
@@ -1441,27 +1464,29 @@
       </contRefs>
       <connections xsi:type="ucm.map:NodeConnection" source="530" target="1115"/>
       <connections xsi:type="ucm.map:NodeConnection" source="1115" target="1226">
-        <condition deltaX="125" deltaY="48" label="interact with one group" expression="true"/>
+        <condition deltaX="177" deltaY="24" label="interact with one group" expression="!interact_with_all_groups" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="1115" target="1205">
-        <condition deltaX="163" deltaY="-11" label="interact with all groups" expression="true"/>
+        <condition deltaX="194" deltaY="6" label="interact with all groups" expression="interact_with_all_groups" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="1174" target="1117"/>
       <connections xsi:type="ucm.map:NodeConnection" source="1195" target="1174" outBindings="//@urndef/@specDiagrams.2/@nodes.4/@bindings.0/@out.0 //@urndef/@specDiagrams.2/@nodes.4/@bindings.1/@out.0"/>
       <connections xsi:type="ucm.map:NodeConnection" source="1205" target="1195" inBindings="//@urndef/@specDiagrams.2/@nodes.4/@bindings.0/@in.0 //@urndef/@specDiagrams.2/@nodes.4/@bindings.1/@in.0">
-        <condition label="" expression="true"/>
+        <condition deltaX="66" deltaY="-5" label="continue to multiple groups" expression="continue_to_multiple_groups" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="1205" target="1240">
-        <condition deltaX="73" deltaY="28" label="cancel" expression="true"/>
+        <condition deltaX="73" deltaY="28" label="cancel" expression="!continue_to_multiple_groups" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="1226" target="1409" inBindings="//@urndef/@specDiagrams.2/@nodes.9/@bindings.0/@in.0">
-        <condition label="" expression="true"/>
+        <condition label="continue to single group" expression="continue_to_single_group" description=""/>
       </connections>
-      <connections xsi:type="ucm.map:NodeConnection" source="1226" target="1240">
-        <condition deltaX="4" deltaY="156" label="cancel" expression="true"/>
+      <connections xsi:type="ucm.map:NodeConnection" source="1226" target="6248">
+        <condition deltaX="3" deltaY="63" label="cancel" expression="!continue_to_single_group" description=""/>
       </connections>
-      <connections xsi:type="ucm.map:NodeConnection" source="1240" target="1207"/>
+      <connections xsi:type="ucm.map:NodeConnection" source="1240" target="6253"/>
       <connections xsi:type="ucm.map:NodeConnection" source="1409" target="1174" outBindings="//@urndef/@specDiagrams.2/@nodes.9/@bindings.0/@out.0"/>
+      <connections xsi:type="ucm.map:NodeConnection" source="6248" target="1240"/>
+      <connections xsi:type="ucm.map:NodeConnection" source="6253" target="1207"/>
     </specDiagrams>
     <specDiagrams xsi:type="ucm.map:UCMmap" name="UCM_HostToGroupInteraction (Show Slides)" id="1308" parentStub="//@urndef/@specDiagrams.2/@nodes.4/@bindings.0">
       <nodes xsi:type="ucm.map:EndPoint" name="groups can go back to working" id="1311" x="989" y="363" contRef="1336" pred="//@urndef/@specDiagrams.3/@connections.4" outBindings="//@urndef/@specDiagrams.2/@nodes.4/@bindings.0/@out.0">
@@ -1540,37 +1565,37 @@
       <connections xsi:type="ucm.map:NodeConnection" source="1399" target="1354"/>
     </specDiagrams>
     <specDiagrams xsi:type="ucm.map:UCMmap" name="UCM_HostToGroupInteraction (Join a Group)" id="1402" parentStub="//@urndef/@specDiagrams.2/@nodes.9/@bindings.0">
-      <nodes xsi:type="ucm.map:StartPoint" name="host ready to join a group" id="1404" x="86" y="449" contRef="1416" succ="//@urndef/@specDiagrams.5/@connections.0" inBindings="//@urndef/@specDiagrams.2/@nodes.9/@bindings.0/@in.0">
-        <metadata name="_hits" value="0"/>
+      <nodes xsi:type="ucm.map:StartPoint" name="host ready to join a group" id="1404" x="86" y="449" contRef="1416" succ="//@urndef/@specDiagrams.5/@connections.0" inBindings="//@urndef/@specDiagrams.2/@nodes.9/@bindings.0/@in.0" scenarioStartPoints="//@ucmspec/@scenarioGroups.0/@scenarios.1/@startPoints.1">
+        <metadata name="_hits" value="2"/>
         <label/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
-      <nodes xsi:type="ucm.map:EndPoint" name="host returned to main meeting" id="1405" x="928" y="464" contRef="1416" pred="//@urndef/@specDiagrams.5/@connections.3" outBindings="//@urndef/@specDiagrams.2/@nodes.9/@bindings.0/@out.0">
-        <metadata name="_hits" value="0"/>
+      <nodes xsi:type="ucm.map:EndPoint" name="host returned to main meeting" id="1405" x="928" y="464" contRef="1416" pred="//@urndef/@specDiagrams.5/@connections.3" outBindings="//@urndef/@specDiagrams.2/@nodes.9/@bindings.0/@out.0" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.1/@endPoints.1">
+        <metadata name="_hits" value="2"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef1418" id="1418" x="411" y="232" contRef="1416" succ="//@urndef/@specDiagrams.5/@connections.1" pred="//@urndef/@specDiagrams.5/@connections.4" respDef="1417">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="2"/>
         <label/>
       </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef1430" id="1430" x="635" y="469" contRef="1416" succ="//@urndef/@specDiagrams.5/@connections.2" pred="//@urndef/@specDiagrams.5/@connections.7" respDef="1429">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="2"/>
         <label deltaX="9" deltaY="-47"/>
       </nodes>
       <nodes xsi:type="ucm.map:WaitingPlace" name="wait for host to leave group" id="1435" x="798" y="464" contRef="1416" succ="//@urndef/@specDiagrams.5/@connections.3" pred="//@urndef/@specDiagrams.5/@connections.2">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="2"/>
         <label deltaX="-3" deltaY="-49"/>
       </nodes>
       <nodes xsi:type="ucm.map:OrFork" name="OrFork1438" id="1438" x="225" y="451" contRef="1416" succ="//@urndef/@specDiagrams.5/@connections.4 //@urndef/@specDiagrams.5/@connections.5" pred="//@urndef/@specDiagrams.5/@connections.0">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="2"/>
       </nodes>
       <nodes xsi:type="ucm.map:WaitingPlace" name="wait for group to request help" id="1443" x="385" y="608" contRef="1416" succ="//@urndef/@specDiagrams.5/@connections.6" pred="//@urndef/@specDiagrams.5/@connections.5">
         <metadata name="_hits" value="0"/>
         <label deltaX="-8" deltaY="-38"/>
       </nodes>
       <nodes xsi:type="ucm.map:OrJoin" name="OrJoin1560" id="1560" x="524" y="433" contRef="1416" succ="//@urndef/@specDiagrams.5/@connections.7" pred="//@urndef/@specDiagrams.5/@connections.1 //@urndef/@specDiagrams.5/@connections.8">
-        <metadata name="_hits" value="0"/>
+        <metadata name="_hits" value="2"/>
       </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef1562" id="1562" x="454" y="533" contRef="1416" succ="//@urndef/@specDiagrams.5/@connections.8" pred="//@urndef/@specDiagrams.5/@connections.6" respDef="1561">
         <metadata name="_hits" value="0"/>
@@ -1586,10 +1611,10 @@
         <condition label="" expression="true"/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="1438" target="1418">
-        <condition deltaX="170" deltaY="26" label="host chooses to join a group" expression="true"/>
+        <condition deltaX="170" deltaY="26" label="host chooses to join a group" expression="host_chooses_to_join_a_group" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="1438" target="1443">
-        <condition deltaX="157" deltaY="6" label="join on group's request" expression="true"/>
+        <condition deltaX="157" deltaY="6" label="join on group's request" expression="!host_chooses_to_join_a_group" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="1443" target="1562">
         <condition label="" expression="true"/>
